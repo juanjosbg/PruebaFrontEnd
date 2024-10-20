@@ -1,7 +1,6 @@
 // src/App.jsx
 import React from "react";
 import PostTable from "./components/PostTable";
-import PostForm from "./components/PostForm";
 
 const App = () => {
   const handleCreatePost = (newPost) => {
@@ -21,7 +20,6 @@ const App = () => {
   return (
     <div>
       <PostTable />
-      <PostForm onSave={handleCreatePost} />
     </div>
   );
 };
