@@ -5,6 +5,7 @@ API de `https://jsonplaceholder.typicode.com/posts` para obtener, crear, actuali
 
 La aplicación permite buscar posts, paginación, edición, creación y eliminación de registros, además de implementar un modal para manejar las operaciones de posts.
 
+
 > [!NOTE]  
 > ## Características
 > - **Listado de posts** con paginación.
@@ -12,6 +13,10 @@ La aplicación permite buscar posts, paginación, edición, creación y eliminac
 > - **Crear, editar y eliminar** publicaciones.
 > - **Modal dinámico** para crear y actualizar posts.
 > - **Ordenamiento** de posts por título (ascendente y descendente).
+
+
+______________________________
+
 
 
 > [!TIP]
@@ -29,6 +34,8 @@ La aplicación permite buscar posts, paginación, edición, creación y eliminac
 > ├── main.tsx             # Punto de entrada de la aplicación
 > └── index.html           # Archivo HTML principal
 > ```
+
+
 ______________________________
 
 
@@ -60,10 +67,13 @@ Node.js (Node)
 > ```
 
 
+______________________________
+
+
+
 > [!TIP]
 > ## Conexión con la API
 > El proyecto está conectado a la API de jsonplaceholder.typicode.com, una API gratuita que proporciona datos simulados para realizar pruebas. La aplicación utiliza las siguientes rutas:
-
 > GET /posts: Para obtener la lista de publicaciones.
 > POST /posts: Para crear una nueva publicación.
 > PUT /posts/{id}: Para actualizar una publicación existente.
