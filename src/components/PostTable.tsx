@@ -117,6 +117,8 @@ const PostTable: React.FC = () => {
     });
   };
 
+  const hasMorePosts = posts.length === POSTS_PER_PAGE; // Comprobar si hay más posts para mostrar
+
   return (
     <div className="container mx-auto py-20">
       <h1 className="text-4xl font-bold mb-20 uppercase text-center">Prueba de Desarrollador Frontend</h1>
@@ -240,12 +242,14 @@ const PostTable: React.FC = () => {
             Anterior
           </button>
         )}
-        <button
-          onClick={() => setCurrentPage(prev => prev + 1)}
-          className="bg-blue-500 hover:bg-[#243e6c] active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 uppercase font-semibold text-white py-2 px-4 mb-4 w-50 rounded-full"
-        >
-          Siguiente
-        </button>
+        {hasMorePosts && ( // Mostrar el botón "Siguiente" solo si hay más posts
+          <button
+            onClick={() => setCurrentPage(prev => prev + 1)}
+            className="bg-blue-500 hover:bg-[#243e6c] active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 uppercase font-semibold text-white py-2 px-4 mb-4 w-50 rounded-full"
+          >
+            Siguiente
+          </button>
+        )}
       </div>
 
       {modalMessage && (
