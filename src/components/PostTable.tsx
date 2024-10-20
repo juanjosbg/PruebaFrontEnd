@@ -114,10 +114,10 @@ const PostTable: React.FC = () => {
       <input
         type="text"
         placeholder="Buscar por título o contenido..."
-        className="border border-gray-300 p-2 mb-4 rounded-lg w-auto shadow-sm"
+        className="border border-gray-300 rounded-full shadow-sm w-72 p-2 px-4 mb-4 mr-2"
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
-      />
+      />  
 
       <button
         onClick={() => {
@@ -127,7 +127,7 @@ const PostTable: React.FC = () => {
           setModalMessage(""); // Asegurarse de que no haya mensajes anteriores
           setShowForm(true); // Mostrar el formulario al hacer clic en "Nuevo Post"
         }}
-        className="bg-blue-500 text-white py-2 px-4 rounded mb-4"
+        className="bg-blue-500 hover:bg-[#243e6c] active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 uppercase font-semibold text-white py-2 px-4 mb-4 w-50 rounded-full"
       >
         Nuevo Post
       </button>
@@ -153,22 +153,23 @@ const PostTable: React.FC = () => {
                 <td className="border border-gray-300 px-4 py-2">{post.title}</td>
                 <td className="border border-gray-300 px-4 py-2">{post.body}</td>
                 <td className="border border-gray-300 px-4 py-2">
-                  <button
+                <button
                     onClick={() => {
-                      setEditPost(post);
-                      setFormTitle(post.title);
-                      setFormBody(post.body);
-                      setShowForm(true); // Mostrar el formulario al editar
+                      setEditPost(post); // Activa la edición del post
+                      setFormTitle(post.title); // Setea el título en el formulario
+                      setFormBody(post.body); // Setea el cuerpo en el formulario
+                      setShowForm(true); // Muestra el formulario
                     }}
-                    className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded mr-2"
+                    className="bg-sky-500 hover:bg-sky-700 text-white font-bold py-1 px-3 rounded-full mt-1 w-20"
                   >
                     Editar
                   </button>
+
                   <button
                     onClick={() => handleDelete(post.id)}
-                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
+                    className="bg-[#ff3333] hover:bg-[#660000] text-white font-bold py-1 px-3 rounded-full mt-1 w-20"
                   >
-                    Eliminar
+                    Borrar
                   </button>
                 </td>
               </tr>
@@ -181,7 +182,6 @@ const PostTable: React.FC = () => {
       {(editPost || showForm) && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded shadow-lg relative">
-            {/* Botón de cerrar (X) */}
             <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
@@ -225,14 +225,14 @@ const PostTable: React.FC = () => {
         {currentPage > 1 && (
           <button
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-            className="bg-sky-500 hover:bg-sky-700 text-white py-1 px-3 rounded-full"
+            className="bg-sky-500 hover:bg-sky-700 text-white py-1 px-3 rounded-full font-semibold"
           >
             Anterior
           </button>
         )}
         <button
           onClick={() => setCurrentPage(prev => prev + 1)}
-          className="bg-sky-500 hover:bg-sky-700 text-white py-1 px-3 rounded-full"
+          className="bg-sky-500 hover:bg-sky-700 text-white py-1 px-3 rounded-full font-semibold"
         >
           Siguiente
         </button>
