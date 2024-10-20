@@ -74,7 +74,7 @@ ______________________________
 > [!TIP]
 > ## Conexión con la API
 > El proyecto está conectado a la API de jsonplaceholder.typicode.com, una API gratuita que proporciona datos simulados para realizar pruebas. La aplicación utiliza las siguientes rutas:
-> GET /posts: Para obtener la lista de publicaciones.
-> POST /posts: Para crear una nueva publicación.
-> PUT /posts/{id}: Para actualizar una publicación existente.
-> DELETE /posts/{id}: Para eliminar una publicación.
+> - GET /posts: Para obtener la lista de publicaciones.
+> - POST /posts: Para crear una nueva publicación.
+> - PUT /posts/{id}: Para actualizar una publicación existente.
+> - DELETE /posts/{id}: Para eliminar una publicación.
