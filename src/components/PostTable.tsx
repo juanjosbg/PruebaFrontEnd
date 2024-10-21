@@ -33,12 +33,12 @@ const PostTable = () => {
   };
   
   const handleUpdatePost = async (updatedPost) => {
-    const newData = await updatePost(updatedPost);
+    const newData = await updatePost(updatedPost.id, { title: updatedPost.title, body: updatedPost.body });
     setPosts(posts.map((post) => (post.id === newData.id ? newData : post)));
-    setNotificationMessage("Post modificado con éxito!"); // Mensaje actualizado
+    setNotificationMessage("Post modificado con éxito!");
     setIsModalOpen(true);
     setCurrentPost(null);
-  };
+};
   
   const handleDeletePost = async (id) => {
     await deletePost(id);

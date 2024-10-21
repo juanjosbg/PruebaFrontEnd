@@ -15,7 +15,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg p-6 shadow-lg px-4 pb-4 pt-5 sm:p-6 sm:pb-4 w-80 relative">
+      <div className="bg-white rounded-lg p-6 shadow-lg px-4 pb-4 pt-5 sm:p-6 sm:pb-4 w-96 relative flex flex-col">
         <button
           type="button"
           onClick={onRequestClose}
@@ -25,14 +25,14 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
           &times;
         </button>
 
-        <h2 className="text-lg font-semibold mb-2 uppercase">Notificación</h2>
-        <p className="mb-4">{message}</p>
+        <h2 className="text-lg font-semibold mb-2 uppercase text-center">Notificación</h2>
+        <p className="mb-4 text-center">{message}</p>
         <button
           type="button"
-          className="mt-3 inline-flex w-full justify-center rounded-full px-10 py-3 text-sm font-semibold shadow-sm ring-1 ring-inset ring-gray-300 sm:mt-0 sm:w-auto bg-sky-500 hover:bg-sky-700 text-white uppercase"
+          className="mt-3 inline-flex w-40 justify-center rounded-full px-10 py-3 text-sm font-semibold shadow-sm ring-1 ring-inset ring-gray-300 sm:mt-0 sm:w-auto bg-sky-500 hover:bg-sky-700 text-white uppercase"
           onClick={onRequestClose}
         >
-          Cerrar
+          Cerrar  
         </button>
       </div>
     </div>

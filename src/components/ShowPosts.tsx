@@ -23,9 +23,9 @@ const ShowPosts: React.FC<ShowPostsProps> = ({
   const sortedPosts = () => {
     return [...posts].sort((a, b) => {
       if (sortOrder === "asc") {
-        return a.id - b.id; // Ordenar de menor a mayor
+        return a.id - b.id;
       } else {
-        return b.id - a.id; // Ordenar de mayor a menor
+        return b.id - a.id;
       }
     });
   };
