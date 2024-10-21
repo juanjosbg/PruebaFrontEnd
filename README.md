@@ -78,3 +78,17 @@ ______________________________
 > - POST /posts: Para crear una nueva publicación.
 > - PUT /posts/{id}: Para actualizar una publicación existente.
 > - DELETE /posts/{id}: Para eliminar una publicación.
+
+
+______________________________
+
+
+> [!NOTE]  
+> Si te sale este error a la hora de darle npm run dev a tu proyecto
+> prube_fronend@0.0.0 dev
+> vite
+>"vite" no se reconoce como un comando interno o externo, programa o archivo por lotes ejecutable.
+> este se soluciona con Instalar Vite como dependencia de desarrollo
+> ```bash
+> npm install vite --save-dev
+> ```
