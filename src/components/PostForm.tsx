@@ -45,7 +45,7 @@ const PostForm = ({ currentPost, setCurrentPost, onCreate, onUpdate }) => {
             </div>
             <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full uppercase"
             >
                 {currentPost ? "Update Post" : "Create Post"}
             </button>
